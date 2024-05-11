@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://dyhw6mwia0r1n" path="res://Materials/textures/pages/M_page.tres" id="3_m0nyc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qvf52"]
-size = Vector3(1.25195, 2.05994, 1)
+size = Vector3(0.863037, 1.26435, 0.380859)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wl5rn"]
 cull_mode = 2
@@ -51,10 +51,11 @@ shadow_mesh = SubResource("ArrayMesh_xeyd3")
 script = ExtResource("1_nvxc2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994107, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.596309, 0)
 shape = SubResource("BoxShape3D_qvf52")
 
 [node name="Page2" parent="." instance=ExtResource("2_ulmj5")]
+transform = Transform3D(0.58, 0, 0, 0, 0.58, 0, 0, 0, 0.58, 0, 0, 0)
 
 [node name="Page" parent="Page2" index="0"]
 material_override = SubResource("StandardMaterial3D_wl5rn")

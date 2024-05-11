@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnse6jxwwqojm"]
+[gd_scene load_steps=15 format=3 uid="uid://bnse6jxwwqojm"]
 
 [ext_resource type="PackedScene" uid="uid://dbteyuptw4x6j" path="res://Scenes/player.tscn" id="1_0uroh"]
 [ext_resource type="Material" uid="uid://c2yaaoinbjbmg" path="res://Materials/textures/M_testground.tres" id="1_ls3jy"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dm1668ng58u4g" path="res://Scenes/page.tscn" id="2_oqfk8"]
 [ext_resource type="Texture2D" uid="uid://dxpnfduwjlcfd" path="res://Materials/textures/pages/page_2.png" id="4_k7nxe"]
 [ext_resource type="Texture2D" uid="uid://bijx8cf2lhfft" path="res://Materials/textures/pages/page_3.png" id="5_6qlyi"]
+[ext_resource type="PackedScene" uid="uid://b5f864fpsli6x" path="res://Assets/birch_a.glb" id="7_1tey2"]
+[ext_resource type="PackedScene" uid="uid://cmisgkyd1igpr" path="res://Scenes/slenderman_v_2.tscn" id="8_gxsu8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3qqdx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -28,6 +30,11 @@ albedo_texture = ExtResource("5_6qlyi")
 cull_mode = 2
 albedo_texture = ExtResource("4_k7nxe")
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_74yov"]
+vertices = PackedVector3Array(-4.5, -0.154341, -3.5, -2.25, -0.154341, -5.25, -2.75, -0.154341, -5.5, -4.75, -0.154341, -4, -24.5, -0.154341, -3, -6.5, -0.154341, -3, -6, -0.154341, -4, -6, -0.154341, -4, -4.75, -0.154341, -4, -2.75, -0.154341, -5.5, -2.75, -0.154341, -7, -6, -0.154341, -4, -2.75, -0.154341, -7, -1.75, -0.154341, -24.5, -24.5, -0.154341, -24.5, -24.5, -0.154341, -3, -2.75, -0.154341, -7, -1.75, -0.154341, -7.25, -1.75, -0.154341, -24.5, -1.75, -0.154341, -24.5, -1.75, -0.154341, -7.25, -1, -0.154341, -7.25, -1.75, -0.154341, -24.5, -1, -0.154341, -7.25, -0.75, -0.154341, -6.25, 24.5, -0.154341, -6.25, 24.5, -0.154341, -24.5, -2.75, 22.8457, -9.75, -1.5, 22.8457, -9.5, -1.75, 22.3457, -10.5, -6.5, 22.8457, -6.5, -5.5, 22.8457, -6.25, -5.5, 22.3457, -7.25, -1.25, 26.0957, -6.75, -2, 26.0957, -7.25, -2.75, 26.0957, -7.25, -3.25, 26.0957, -6.25, -2.5, 26.3457, -5.25, -1.25, 26.3457, -5.75, -2.25, -0.154341, -5.25, -4.5, -0.154341, -3.5, -4.5, -0.154341, -2.25, -1, -0.154341, -5.25, -4.5, -0.154341, -2.25, -4.75, -0.154341, 5.75, -4.5, -0.154341, 6.25, 24.5, -0.154341, 6.25, 24.5, -0.154341, -6.25, -1, -0.154341, -5.25, -5.5, -0.154341, -2, -5.5, -0.154341, 5.75, -4.75, -0.154341, 5.75, -4.5, -0.154341, -2.25, 24.5, -0.154341, -6.25, -0.75, -0.154341, -6.25, -1, -0.154341, -5.25, -5, 26.0957, -3.75, -5.75, 26.0957, -4, -6.5, 26.0957, -4, -7, 26.0957, -3, -6.25, 26.0957, -2, -5, 26.3457, -2.5, -6.5, -0.154341, 6, -5.5, -0.154341, 5.75, -5.5, -0.154341, -2, -6.5, -0.154341, -2.25, -24.5, -0.154341, -3, -24.5, -0.154341, 7.5, -24.5, -0.154341, 7.5, -6.5, -0.154341, 7.5, -6.5, -0.154341, 6, -6.5, -0.154341, -2.25, -6.5, -0.154341, -3, -24.5, -0.154341, -3, -6.5, 22.8457, 3.25, -5, 22.8457, 3.5, -5.5, 22.3457, 2.5, -6.5, 26.0957, 8.75, -5.25, 26.0957, 9, -4.75, 26.3457, 8.25, -5.25, 26.0957, 5.75, -6.5, 26.0957, 5.75, -7, 26.0957, 6.75, -4.5, -0.154341, 9, -5.5, -0.154341, 9.25, -5.5, -0.154341, 24.5, 24.5, -0.154341, 24.5, 24.5, -0.154341, 6.25, 24.5, -0.154341, 6.25, -4.5, -0.154341, 6.25, -4.5, -0.154341, 9, -5.5, -0.154341, 24.5, -5.5, -0.154341, 9.25, -6.5, -0.154341, 9, -24.5, -0.154341, 7.5, -24.5, -0.154341, 24.5, -6.5, -0.154341, 9, -6.5, -0.154341, 7.5, -24.5, -0.154341, 7.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 15), PackedInt32Array(13, 15, 14), PackedInt32Array(18, 17, 16), PackedInt32Array(21, 20, 19), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(25, 22, 26), PackedInt32Array(28, 27, 29), PackedInt32Array(32, 31, 30), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 38), PackedInt32Array(35, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(44, 43, 45), PackedInt32Array(45, 43, 48), PackedInt32Array(45, 48, 46), PackedInt32Array(46, 48, 47), PackedInt32Array(50, 49, 51), PackedInt32Array(51, 49, 52), PackedInt32Array(55, 54, 53), PackedInt32Array(57, 56, 58), PackedInt32Array(58, 56, 59), PackedInt32Array(59, 56, 61), PackedInt32Array(59, 61, 60), PackedInt32Array(63, 62, 64), PackedInt32Array(64, 62, 65), PackedInt32Array(65, 62, 66), PackedInt32Array(66, 62, 67), PackedInt32Array(70, 69, 68), PackedInt32Array(73, 72, 71), PackedInt32Array(76, 75, 74), PackedInt32Array(78, 77, 79), PackedInt32Array(79, 77, 82), PackedInt32Array(79, 82, 81), PackedInt32Array(79, 81, 80), PackedInt32Array(84, 83, 85), PackedInt32Array(85, 83, 86), PackedInt32Array(86, 83, 87), PackedInt32Array(90, 89, 88), PackedInt32Array(92, 91, 93), PackedInt32Array(93, 91, 95), PackedInt32Array(93, 95, 94), PackedInt32Array(98, 97, 96)]
+agent_height = 5.6
+
 [node name="testMap" type="Node3D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -41,39 +48,61 @@ environment = SubResource("Environment_mlelc")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4995, 0)
-use_collision = true
-size = Vector3(20, 0.001, 20)
-material = ExtResource("1_ls3jy")
-
 [node name="Player" parent="." instance=ExtResource("1_0uroh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39326, 0.00866008, -0.00783587)
 
-[node name="Page" parent="." instance=ExtResource("2_oqfk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27318, -5.76713)
+[node name="Pages" type="Node3D" parent="."]
 
-[node name="Page2" parent="." instance=ExtResource("2_oqfk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.908, 1.27318, -5.76713)
+[node name="Page" parent="Pages" instance=ExtResource("2_oqfk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.702952, -5.76713)
 
-[node name="Page" parent="Page2/Page2" index="0"]
+[node name="Page2" parent="Pages" instance=ExtResource("2_oqfk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.908, 0.702952, -5.76713)
+
+[node name="Page" parent="Pages/Page2/Page2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00525212, 1.04807, 0.0247869)
 material_override = SubResource("StandardMaterial3D_to5ro")
 
-[node name="Page3" parent="." instance=ExtResource("2_oqfk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16173, 1.27318, -5.76713)
+[node name="Page3" parent="Pages" instance=ExtResource("2_oqfk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16173, 0.702952, -5.76713)
 
-[node name="Page" parent="Page3/Page2" index="0"]
+[node name="Page" parent="Pages/Page3/Page2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00525212, 1.04807, 0.0247869)
 material_override = SubResource("StandardMaterial3D_nh0b3")
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0172958, -2.38419e-07, 0.00340843)
+navigation_mesh = SubResource("NavigationMesh_74yov")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4995, 0)
+use_collision = true
+size = Vector3(50, 0.001, 50)
+material = ExtResource("1_ls3jy")
+
+[node name="birch_a" parent="NavigationRegion3D" instance=ExtResource("7_1tey2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.43909, -0.499, 8.30145)
+
+[node name="birch_a2" parent="NavigationRegion3D" instance=ExtResource("7_1tey2")]
+transform = Transform3D(0.6651, 0, 0.746754, 0, 1, 0, -0.746754, 0, 0.6651, -5.43909, -0.499, 6.72194)
+
+[node name="birch_a3" parent="NavigationRegion3D" instance=ExtResource("7_1tey2")]
+transform = Transform3D(0.6651, 0, 0.746754, 0, 1, 0, -0.746754, 0, 0.6651, -5.43909, -0.499, -2.97865)
+
+[node name="birch_a4" parent="NavigationRegion3D" instance=ExtResource("7_1tey2")]
+transform = Transform3D(0.6651, 0, 0.746754, 0, 1, 0, -0.746754, 0, 0.6651, -1.72914, -0.499, -6.23882)
+
+[node name="slenderman_v2" parent="." instance=ExtResource("8_gxsu8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82034, -0.453002, 0)
+
 [connection signal="pages_info" from="GameManager" to="Player/head/camera/interaction" method="_pages_count_update"]
-[connection signal="page_picked" from="Page" to="GameManager" method="_update_pages"]
-[connection signal="page_picked" from="Page2" to="GameManager" method="_update_pages"]
-[connection signal="page_picked" from="Page3" to="GameManager" method="_update_pages"]
+[connection signal="page_picked" from="Pages/Page" to="GameManager" method="_update_pages"]
+[connection signal="page_picked" from="Pages/Page2" to="GameManager" method="_update_pages"]
+[connection signal="page_picked" from="Pages/Page3" to="GameManager" method="_update_pages"]
 
 [editable path="Player"]
-[editable path="Page2"]
-[editable path="Page2/Page2"]
-[editable path="Page3"]
-[editable path="Page3/Page2"]
+[editable path="Pages/Page2"]
+[editable path="Pages/Page2/Page2"]
+[editable path="Pages/Page3"]
+[editable path="Pages/Page3/Page2"]
+[editable path="slenderman_v2"]

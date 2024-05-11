@@ -2,11 +2,9 @@ extends RayCast3D
 @onready var label = $"../../../InteractableUi/Label"
 @onready var pick_timer = $"../../../InteractableUi/pick_timer"
 @onready var label_anim = $"../../../InteractableUi/LabelAnim"
-var game_manager
 var current_collider
 
 func _ready():
-	game_manager = %GameManager
 	label.hide()
 
 func _physics_process(delta):
