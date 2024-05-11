@@ -1,5 +1,8 @@
 extends Interactable
 
+@onready var game_manager = %GameManager
+
 func interact():
-	print("zebrano notatke")
+	game_manager.add_page()
+	print("zebrano notatke ")
 	queue_free()

@@ -1,10 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnse6jxwwqojm"]
+[gd_scene load_steps=7 format=3 uid="uid://bnse6jxwwqojm"]
 
 [ext_resource type="PackedScene" uid="uid://dbteyuptw4x6j" path="res://Scenes/player.tscn" id="1_0uroh"]
 [ext_resource type="Material" uid="uid://c2yaaoinbjbmg" path="res://Materials/textures/M_testground.tres" id="1_ls3jy"]
-[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_sftc8"]
 [ext_resource type="PackedScene" uid="uid://dm1668ng58u4g" path="res://Scenes/page.tscn" id="2_oqfk8"]
-[ext_resource type="Texture2D" uid="uid://dxpnfduwjlcfd" path="res://Materials/textures/pages/page_2.png" id="4_k7nxe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3qqdx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -19,15 +17,7 @@ sky = SubResource("Sky_e1o1n")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xx30m"]
-cull_mode = 2
-albedo_texture = ExtResource("4_k7nxe")
-
 [node name="testMap" type="Node3D"]
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_sftc8")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mlelc")
@@ -50,9 +40,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27318, -5.76713)
 
 [node name="Page2" parent="." instance=ExtResource("2_oqfk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.27318, -5.76713)
+id_page = 2
 
 [node name="Page" parent="Page2/Page2" index="0"]
-material_override = SubResource("StandardMaterial3D_xx30m")
 surface_material_override/0 = ExtResource("1_ls3jy")
 
 [editable path="Page2"]

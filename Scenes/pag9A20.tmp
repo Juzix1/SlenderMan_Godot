@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm1668ng58u4g"]
+
+[ext_resource type="Script" path="res://Scripts/Page.gd" id="1_nvxc2"]
+[ext_resource type="PackedScene" uid="uid://bh5upo7dcer8t" path="res://Assets/Page.blend" id="2_ulmj5"]
+[ext_resource type="Material" uid="uid://dyhw6mwia0r1n" path="res://Materials/textures/pages/M_page1.tres" id="3_55nr7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvf52"]
+size = Vector3(1.25195, 2.05994, 1)
+
+[node name="Page" type="StaticBody3D" groups=["Interactable"]]
+script = ExtResource("1_nvxc2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994107, 0)
+shape = SubResource("BoxShape3D_qvf52")
+
+[node name="Page2" parent="." instance=ExtResource("2_ulmj5")]
+
+[node name="Page" parent="Page2" index="0"]
+material_override = ExtResource("3_55nr7")
+
+[editable path="Page2"]
