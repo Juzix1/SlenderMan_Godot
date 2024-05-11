@@ -16,10 +16,8 @@ func _physics_process(delta):
 		%TextureRect.show()
 		if Input.is_action_pressed("interact"):
 			collider.interact()
-			label.show()
-			label_anim.play("RESET")
-			pick_timer.start()
-			label.text = "Pages "+game_manager.get_pages()+"/8"
+			
+			#label.text = "Pages "+game_manager.get_pages()+"/8"
 
 
 func _on_pick_timer_timeout():
@@ -28,3 +26,11 @@ func _on_pick_timer_timeout():
 
 func hide_label():
 	label.hide()
+
+
+func _pages_count_update(arg1):
+	label.show()
+	label_anim.play("RESET")
+	pick_timer.start()
+	label.text = "Picked "+str(arg1)+"/8"
+	

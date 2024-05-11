@@ -1,8 +1,9 @@
 extends Interactable
 
-@onready var game_manager = %GameManager
+signal page_picked
 
 func interact():
-	game_manager.add_page()
+
 	print("zebrano notatke ")
+	emit_signal("page_picked")
 	queue_free()

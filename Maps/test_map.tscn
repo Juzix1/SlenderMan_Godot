@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnse6jxwwqojm"]
+[gd_scene load_steps=12 format=3 uid="uid://bnse6jxwwqojm"]
 
 [ext_resource type="PackedScene" uid="uid://dbteyuptw4x6j" path="res://Scenes/player.tscn" id="1_0uroh"]
 [ext_resource type="Material" uid="uid://c2yaaoinbjbmg" path="res://Materials/textures/M_testground.tres" id="1_ls3jy"]
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_sftc8"]
 [ext_resource type="PackedScene" uid="uid://dm1668ng58u4g" path="res://Scenes/page.tscn" id="2_oqfk8"]
 [ext_resource type="Texture2D" uid="uid://dxpnfduwjlcfd" path="res://Materials/textures/pages/page_2.png" id="4_k7nxe"]
+[ext_resource type="Texture2D" uid="uid://bijx8cf2lhfft" path="res://Materials/textures/pages/page_3.png" id="5_6qlyi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3qqdx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -19,7 +20,11 @@ sky = SubResource("Sky_e1o1n")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xx30m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_to5ro"]
+cull_mode = 2
+albedo_texture = ExtResource("5_6qlyi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nh0b3"]
 cull_mode = 2
 albedo_texture = ExtResource("4_k7nxe")
 
@@ -49,11 +54,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39326, 0.00866008, -0.0078
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27318, -5.76713)
 
 [node name="Page2" parent="." instance=ExtResource("2_oqfk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.27318, -5.76713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.908, 1.27318, -5.76713)
 
 [node name="Page" parent="Page2/Page2" index="0"]
-material_override = SubResource("StandardMaterial3D_xx30m")
-surface_material_override/0 = ExtResource("1_ls3jy")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00525212, 1.04807, 0.0247869)
+material_override = SubResource("StandardMaterial3D_to5ro")
 
+[node name="Page3" parent="." instance=ExtResource("2_oqfk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16173, 1.27318, -5.76713)
+
+[node name="Page" parent="Page3/Page2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00525212, 1.04807, 0.0247869)
+material_override = SubResource("StandardMaterial3D_nh0b3")
+
+[connection signal="pages_info" from="GameManager" to="Player/head/camera/interaction" method="_pages_count_update"]
+[connection signal="page_picked" from="Page" to="GameManager" method="_update_pages"]
+[connection signal="page_picked" from="Page2" to="GameManager" method="_update_pages"]
+[connection signal="page_picked" from="Page3" to="GameManager" method="_update_pages"]
+
+[editable path="Player"]
 [editable path="Page2"]
 [editable path="Page2/Page2"]
+[editable path="Page3"]
+[editable path="Page3/Page2"]
