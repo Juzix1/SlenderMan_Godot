@@ -663,7 +663,7 @@ libraries = {
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 target_desired_distance = 2.0
-path_height_offset = 2.0
+path_height_offset = 0.3
 
 [node name="Range" type="Area3D" parent="."]
 
@@ -672,7 +672,7 @@ shape = SubResource("SphereShape3D_olkt0")
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-aabb = AABB(-0.508939, -1, -0.278226, 1.01788, 2, 0.556452)
+aabb = AABB(-1, -1, -0.70958, 2, 2, 1.41916)
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="body_entered" from="Range" to="." method="_on_area_3d_body_entered"]

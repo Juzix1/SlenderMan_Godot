@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnse6jxwwqojm"]
+[gd_scene load_steps=14 format=3 uid="uid://bnse6jxwwqojm"]
 
 [ext_resource type="PackedScene" uid="uid://dbteyuptw4x6j" path="res://Scenes/player.tscn" id="1_0uroh"]
 [ext_resource type="Material" uid="uid://c2yaaoinbjbmg" path="res://Materials/textures/M_testground.tres" id="1_ls3jy"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dxpnfduwjlcfd" path="res://Materials/textures/pages/page_2.png" id="4_k7nxe"]
 [ext_resource type="Texture2D" uid="uid://bijx8cf2lhfft" path="res://Materials/textures/pages/page_3.png" id="5_6qlyi"]
 [ext_resource type="PackedScene" uid="uid://b5f864fpsli6x" path="res://Assets/birch_a.glb" id="7_1tey2"]
-[ext_resource type="PackedScene" uid="uid://cmisgkyd1igpr" path="res://Scenes/slenderman_v_2.tscn" id="8_gxsu8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3qqdx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -92,9 +91,6 @@ transform = Transform3D(0.6651, 0, 0.746754, 0, 1, 0, -0.746754, 0, 0.6651, -5.4
 [node name="birch_a4" parent="NavigationRegion3D" instance=ExtResource("7_1tey2")]
 transform = Transform3D(0.6651, 0, 0.746754, 0, 1, 0, -0.746754, 0, 0.6651, -1.72914, -0.499, -6.23882)
 
-[node name="slenderman_v2" parent="." instance=ExtResource("8_gxsu8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82034, -0.453002, 0)
-
 [connection signal="pages_info" from="GameManager" to="Player/head/camera/interaction" method="_pages_count_update"]
 [connection signal="page_picked" from="Pages/Page" to="GameManager" method="_update_pages"]
 [connection signal="page_picked" from="Pages/Page2" to="GameManager" method="_update_pages"]
@@ -105,4 +101,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82034, -0.453002, 0)
 [editable path="Pages/Page2/Page2"]
 [editable path="Pages/Page3"]
 [editable path="Pages/Page3/Page2"]
-[editable path="slenderman_v2"]
