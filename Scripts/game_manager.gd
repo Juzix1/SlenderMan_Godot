@@ -11,8 +11,7 @@ signal pages_info
 func add_page():
 	pages += 1
 	
-	if pages > 0:
-		print(randomize_chance(pages))
+	if pages >= 2:
 		if randomize_chance(pages) > 0.038:
 			spawn_slender()
 	if pages == 8:

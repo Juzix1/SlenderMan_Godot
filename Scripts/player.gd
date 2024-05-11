@@ -10,6 +10,8 @@ var mouse_sens = 0.3
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+var Looking = false
+var death_meter = 0.0
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -40,3 +42,17 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	move_and_slide()
+	
+	if Looking:
+		death_meter += delta
+	else:
+		if death_meter >=0:
+			death_meter -= delta * 0.5
+	print(death_meter)
+
+func look_meter_start():
+	print("looking player")
+	Looking = true
+func look_meter_stop():
+	print("not looking player")
+	Looking = false

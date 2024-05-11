@@ -32,13 +32,15 @@ func _on_area_3d_body_entered(body):
 func _on_area_3d_body_exited(body):
 	inRange=false
 	queue_free()
+	get_tree().call_group("Player","look_meter_stop")
 	print("you escaped...")
-
 
 
 func _on_visible_on_screen_notifier_3d_screen_exited():
 	Looking = false
+	get_tree().call_group("Player","look_meter_stop")
 
 
 func _on_visible_on_screen_notifier_3d_screen_entered():
 	Looking = true
+	get_tree().call_group("Player","look_meter_start")
