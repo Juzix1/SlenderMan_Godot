@@ -19,7 +19,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73579, 0)
 [node name="camera" type="Camera3D" parent="head"]
 
 [node name="interaction" type="RayCast3D" parent="head/camera"]
-target_position = Vector3(0, 0, -5)
+target_position = Vector3(0, 0, -2)
 script = ExtResource("2_feolt")
 
 [node name="InteractableUi" type="Control" parent="."]

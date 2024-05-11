@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm1668ng58u4g"]
+[gd_scene load_steps=4 format=3 uid="uid://dm1668ng58u4g"]
 
 [ext_resource type="Script" path="res://Scripts/Page.gd" id="1_nvxc2"]
+[ext_resource type="PackedScene" uid="uid://cjraibv1780sm" path="res://Assets/Page.glb" id="2_1lr84"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qvf52"]
 size = Vector3(1.25195, 2.05994, 1)
@@ -13,3 +14,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994107, 0)
 shape = SubResource("BoxShape3D_qvf52")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Page2" parent="MeshInstance3D" instance=ExtResource("2_1lr84")]
