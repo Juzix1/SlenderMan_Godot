@@ -42,6 +42,7 @@ script = ExtResource("1_sftc8")
 
 [node name="Timer" type="Timer" parent="GameManager"]
 wait_time = 20.0
+autostart = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mlelc")

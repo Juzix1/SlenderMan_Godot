@@ -674,6 +674,9 @@ shape = SubResource("SphereShape3D_olkt0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 aabb = AABB(-1, -1, -0.70958, 2, 2, 1.41916)
 
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 10.0
+
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="body_entered" from="Range" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_area_3d_body_exited"]

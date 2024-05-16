@@ -7,7 +7,7 @@
 radius = 3.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4kdkr"]
-radius = 9.85391
+radius = 11.63
 
 [node name="slenderman" type="CharacterBody3D"]
 script = ExtResource("1_d7kx2")

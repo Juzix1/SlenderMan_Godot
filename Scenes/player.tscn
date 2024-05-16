@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbteyuptw4x6j"]
+[gd_scene load_steps=11 format=3 uid="uid://dbteyuptw4x6j"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_7h7hm"]
 [ext_resource type="Script" path="res://Scripts/interaction.gd" id="2_feolt"]
 [ext_resource type="Script" path="res://Scripts/raycast_slender.gd" id="3_4sxll"]
 [ext_resource type="FontFile" uid="uid://c13c38jqj70t6" path="res://Materials/fonts/newSlendermanswriting.ttf" id="3_70u68"]
 [ext_resource type="Texture2D" uid="uid://dgwf2o7ot2ugu" path="res://Materials/textures/use.png" id="3_cudcs"]
+[ext_resource type="Texture2D" uid="uid://8rcb0bgj3o7k" path="res://Materials/textures/noise.jpg" id="6_qdgnc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uyich"]
 
@@ -79,6 +80,9 @@ script = ExtResource("2_feolt")
 target_position = Vector3(0, 0, -20)
 script = ExtResource("3_4sxll")
 
+[node name="slender_spawn" type="Node3D" parent="head/camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.73579, 8.73978)
+
 [node name="InteractableUi" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -129,5 +133,15 @@ wait_time = 3.0
 libraries = {
 "": SubResource("AnimationLibrary_d8cf8")
 }
+
+[node name="TextureRect2" type="TextureRect" parent="InteractableUi"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_qdgnc")
+stretch_mode = 5
 
 [connection signal="timeout" from="InteractableUi/pick_timer" to="head/camera/interaction" method="_on_pick_timer_timeout"]

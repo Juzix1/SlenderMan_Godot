@@ -1,9 +1,10 @@
-extends Interactable
+extends "res://Scripts/Interactable.gd"
 
 signal page_picked
 
-func interact():
 
+func interact():
 	print("zebrano notatke ")
-	emit_signal("page_picked")
+	page_picked.emit()
+	%GameManager._update_pages()
 	queue_free()
